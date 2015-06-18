@@ -1,0 +1,210 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+}
+body {
+	background-color: #eee;
+	margin: 0;
+	/*background-image: url(./img/Blurred/light-green-blurred-background.jpg);*/
+	background-repeat: no-repeat;
+
+	background-size: 100% 1000px;
+/*	-webkit-background-size: cover;
+	background-size: cover;*/
+	margin: 0;
+	height: 100%;
+	width: 100%;
+}
+.main_container{
+
+}
+.register, .login, .reminder{
+	margin: 1% auto 0 auto;
+	position: relative;
+	width: 400px;
+	padding: 1% 2% 2% 5%;
+	background-color: #fff;
+	border-radius: 5px;
+	/*background-image: url(img/burnm.png);*/
+	/*-webkit-background-size: cover;
+	background-size: cover;*/
+	background-repeat: no-repeat;
+	background-position: 80% 40%;
+	-webkit-background-size: 140%;
+	background-size: 140%;
+	/*box-shadow: 0px 2px 10px #999;*/
+	cursor: default;
+	/*border: 1px solid #000;*/
+
+}
+form{
+	background:none;
+}
+h1 {
+	margin: 0 0 0px 0;
+}
+#login, #register, #remind, #cancel_rem{
+	height: 40px;
+	width: 120px;
+	border: none;
+	border-radius: 5px;
+	font-size: 20px;
+	background: -webkit-linear-gradient(top, #C9FFCE 0%, #A7EC94 100%);
+	color: #fff;
+	outline: none;
+	cursor: pointer;
+	text-shadow: 0px 1px 0px #75E759;
+	box-shadow: 0px 1px 0px #85BE8A, inset 1px 1px 5px #D0F7D0, inset -1px -1px 0px #7DF760, inset -1px -1px 3px #fff;
+	display:  block;
+	text-transform: uppercase;
+	margin: 5% 0 0 0;
+	border: 1px solid #9CE8A3;
+
+
+	/*float: left;*/
+}
+#remind{
+	float: left;
+	margin-right: 2%;
+}
+.reminder{
+	display: none;
+}
+
+#r_username, #r_password, #r_email, #password, #email, #forgot_email {
+	font-size: 18px;
+	height: 20px;
+	margin: 2% 4% 0 0;
+	outline-color: #43C0FF;
+	width: 80%;
+	padding: 2%;
+	border-radius: 6px;
+	border: 1px solid #ccc;
+	
+
+}
+header{
+	background-color: #fff;
+}
+label {
+	text-transform: uppercase;
+	margin-top: 10px;
+	position: relative;
+	display: inline-block;
+	/*border: 1px solid #000;*/
+}
+.login .warn_wrapper, .register .warn_wrapper{
+	width: 200px;
+	height: 40px;
+	border: 1px solid #FF9162;
+	background: #FFFB90;
+	display:  none;
+
+	left: -50px;
+	top: -40px;
+	font-size: 14px;
+	border-radius: 2px;
+	margin: 0px 0 0 0px;
+	text-align: center;
+	line-height:40px;
+	color:#F17568;
+	position: relative;
+	/*opacity: .0;*/
+	float: right;
+	cursor: pointer;
+
+}
+.fa-check{
+	color: #45E338;
+}
+.fa-close, .mdi-thumb-down, .mdi-close{
+	color: #FF4844;
+	font-size: 30px;
+}
+
+#bubble, #bubble1, #bubble2{
+	font-size: 15px;
+	color: #FAA52F;
+	margin: 0 0 0% 1%;
+	position: relative;
+	width: 70%;
+/*	top: 123px;
+	left: 15%;*/
+	height: 20px;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+	padding: 0 5px 0 5px;
+	background-color: #FFFB90;
+	border: 1px solid #FAB268;
+	border-top: none;
+	/*visibility: hidden;*/
+
+	display:none;
+	text-align: center;
+	box-shadow: inset -1px -1px 2px #fff;
+}
+.selected{
+	opacity: .9;
+}
+.mdi-check, .mdi-checkbox-marked-circle-outline, .mdi-thumb-up{
+	color:#45E338;
+	font-size: 30px;
+}
+
+.login a{
+	color: #848BE6;
+	font-size: 15px;
+}
+.noty{
+	font-family: sans-serif;
+	font-size: 19px;
+	border-radius: 8px;
+	background-color: #fff;
+	padding: 0 2% 0 2%;
+	/*position: absolute;*/
+	cursor:pointer;
+	text-align: center;
+	/*display:none;*/
+	height: 50px;
+	margin-top: -50px;
+	line-height: 50px;
+	background-color: #FFF;
+	opacity: .0;
+	position: fixed;
+	z-index: 99999;
+	width: 100%;
+}
+.noty_mailadress_wrapper{
+	color: white;
+	border-radius: 5px;
+	background-color: #FF5255;
+	padding: 5px;
+}
+.clean_register_form{
+	width: 30px;
+	height: 25px;
+	border: 1px solid #E6E6E6;
+	margin-left: 50%;
+	display: inline-block;
+	text-align: center;
+	line-height: 25px;
+	border-radius: 4px;
+	color: #ccc;
+	-webkit-user-select: none;
+	background: -webkit-linear-gradient(top, #F7F7F7 0%, #F0F0F0 100%);
+	background-color: #F8FFF8;
+	cursor: pointer;
+	/*-webkit-box-shadow: 0px 1px 0px #BEBEBE;*/
+	box-shadow: 0px 2px 0px #DBDBDB, inset 0px 1px 0px #F9F9F9, inset 0px -1px 0px #fff;
+
+}
+.clean_register_form:hover{
+	background-color: #F8FFF8;
+}
+.clean_register_form:active{
+	-webkit-box-shadow: inset 0 1px 2px #B7B7B7;
+	box-shadow: inset 0 1px 2px #B7B7B7;
+
+
+}
