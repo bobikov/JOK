@@ -2,7 +2,7 @@ $(document).ready(function(){
 	
 	$("#reminder").click(function(){
 	$(".reminder").remove();
-	$('<div class="reminder animated fadeIn"> <h1>Remind password</h1> <form action="" method="post"> <label for="email">email:</label><br> <input type="text" minlength="4" autofocus=true name="email" id="forgot_email"><br> <input type="submit" name="action" id="remind" value="Submit"><input type="button" name="action" id="cancel_rem" value="Cancel"></form> </div>').insertAfter($(".login")).slideDown("slow");
+	$('<div class="reminder animated fadeIn"> <h1>Remind password</h1> <form action="" method="post"> <label for="email">email:</label><br> <input type="text" minlength="4" autofocus=true value="sdf@fds.ru" name="email" id="forgot_email"><br> <input type="submit" name="action" id="remind" value="Submit"><input type="button" name="action" id="cancel_rem" value="Cancel"></form> </div>').insertAfter($(".login")).slideDown("slow");
 	$("#cancel_rem").click(function(){
 		$(".reminder").removeClass("animated fadeIn");
 		$(".reminder").addClass("animated fadeOut");
@@ -17,18 +17,25 @@ $(document).ready(function(){
 			execs = pat.exec(email);
 	bubblerReminder = function(element, message) {
 				$("#bubble").remove();
-				$(".reminder .warn_wrapper").fadeOut("fast");
+				// $(".reminder .warn_wrapper").fadeOut("fast");
 				$("<div id='bubble'>"+message+"</div>").insertAfter($(".reminder " +element).next());
 				$(".reminder #bubble").slideDown("fast");
 				};
-
+				
+				
+				// $("<div class='animated bounceIn' ><div id='loader> <div class='diamond'></div> <div class='diamond'></div> <div class='diamond'></div> </div> </div></div>").insertAfter($(".login"));
+				
 		if(execs===null){
 			bubblerReminder("#forgot_email", "not correct address");
 			return e.preventDefault(e);
 		}
 		else {
-				$.post("remindPass.php", {email: email}, function(data){
+				$('<div class="load_wrapper"><div class="animated bounceIn" ><div class="typing-indicator "> <span></span> <span></span> <span></span> </div></div></div>').insertBefore($(".login"));
+				$(".reminder").slideUp(300, "swing");
+				$.post("sendMail.py", {email: email}, function(data){
+					$('.load_wrapper').fadeOut('fast', function(){$(this).remove();});
 					$("<div class='noty'></div>").insertBefore($(".login")).html(data);
+					
 				
 
 					$(".noty").animate({
@@ -45,6 +52,7 @@ $(document).ready(function(){
 					}, 300, "swing", function(){$(this).remove();});
 							
 					});
+
 				});
 				$(".reminder #bubble").slideUp("fast", function(){$(this).remove();});
 				return e.preventDefault(e);

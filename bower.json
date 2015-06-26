@@ -25,6 +25,8 @@
     "dropzone": "~4.0.1",
     "fontawesome": "~4.3.0",
     "material-design-icons": "~2.0.0",
-    "modernizr": "~2.8.3"
+    "modernizr": "~2.8.3",
+    "loaders.css": "~0.1.1",
+    "css-loading-spinners": "~1.0.0"
   }
 }

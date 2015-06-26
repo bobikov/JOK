@@ -72,8 +72,8 @@ $(document).ready(function(){
 	$("#r_password").keyup(function(){
 		$(".register .warn_wrapper").fadeOut("fast");
 		if ($("#r_password").val().length < 6){
-				$(".super1").remove();
-				$("<i class='super1 fa fa-close'></i>").insertAfter($("#r_password"));
+			$(".super1").remove();
+			$("<i class='super1 fa fa-close'></i>").insertAfter($("#r_password"));
 		}
 		else{
 			$(".super1").remove();
@@ -90,8 +90,8 @@ $(document).ready(function(){
 		
 			
 		if (execs === null || email === ''){
-				$(".super2").remove();
-				$("<i class='super2 fa fa-close'></i>").insertAfter($("#r_email"));
+			$(".super2").remove();
+			$("<i class='super2 fa fa-close'></i>").insertAfter($("#r_email"));
 		}
 		else{
 			$(".super2").remove();
@@ -103,4 +103,6 @@ $(document).ready(function(){
 	$(".clean_register_form").click(function(){
 		$(".register [type=text], [type=password]").val('');
 	});
+	// $("#r_username, #r_password, #r_email, #password, #email, #forgot_email" ).focus(function(){$(this).css("border", "3px solid #ccc");});
+	// $("#r_username, #r_password, #r_email, #password, #email, #forgot_email" ).blur(function(){$(this).css("border", "1px solid #C7C7C7");});
 });

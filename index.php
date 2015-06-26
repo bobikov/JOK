@@ -7,17 +7,22 @@
 	<link rel="stylesheet" href="animate.css/animate.css">
 	<link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css">
 	<link rel="stylesheet" href="bower_components/mdi/css/materialdesignicons.css">
+	<link rel="stylesheet" href="bower_components/loaders.css/loaders.css">
 	<script src="bower_components/jquery/dist/jquery.js"></script>
 	<script src="bower_components/modernizr/modernizr.js"></script>
-	<script src="bower_components/autosize/"></script>
 	<script src="bower_components/noty/js/noty/jquery.noty.js"></script>
+	<!-- <script src="bower_components/autosize/src/autosize.js"></script> -->
+	<script src="bower_components/loaders.css/loaders.css.js"></script>
+	
+	
 	<script src="register.js"></script>
 	<script src="remind.js"></script>
 </head>
 <body>
 	<div class="main_container">
-	<div class="login animated fadeIn" id="mainlogin">
-		<h1>Login</h1>
+		
+	<div class="login" id="mainlogin">
+		<h1 id='firsth'>Login</h1>
 		<form action="" method="post">
 			<label for="email">email:</label><br>
 			<input type="text" minlength="4" name="email" id="email"><br>
@@ -31,11 +36,12 @@
 
 		</form>
 	</div>
-	<div class="register animated fadeIn" id="mainregister">
+ <div class="register" id="mainregister">
 		<h1>Registration</h1>
 		<form action="" method="post">
-			<label for="username" >username:</label><div class="clean_register_form">
-			<i class="fa fa-repeat"></i></div><br>
+			<label for="username" >username:</label>
+			<!-- <div class="clean_register_form">
+			<i class="fa fa-repeat"></i></div><br> -->
 			<input type="text" minlength="4"  name="username" id="r_username"><br>
 			<label for="password">password:</label><br>
 			<input type="password"  minlength="4" name="password" id="r_password"><br>
