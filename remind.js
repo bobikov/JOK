@@ -30,7 +30,7 @@ $(document).ready(function(){
 			return e.preventDefault(e);
 		}
 		else {
-				$('<div class="load_wrapper"><div class="animated bounceIn" ><div class="typing-indicator "> <span></span> <span></span> <span></span> </div></div></div>').insertBefore($(".login"));
+				$('<div class="load_wrapper"><div class="animated bounceIn" ><div class="typing-indicator "> <span></span> <span></span> <span></span> </div></div></div>').insertBefore($(".icons"));
 				$(".reminder").slideUp(300, "swing");
 				$.post("sendMail.py", {email: email}, function(data){
 					$('.load_wrapper').fadeOut('fast', function(){$(this).remove();});
